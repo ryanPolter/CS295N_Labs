@@ -1,0 +1,33 @@
+﻿@model StoriesModel
+
+<form method="post" class="container">
+    <div class="row p-2">
+        <label asp-for="StoryTitle" class="control-label col-md-1">Title of Story</label>
+        <input asp-for="StoryTitle" class="form-control col-md-6" />
+    </div>
+    <div class="row p-2">
+        <label asp-for="Topic" class="control-label col-md-1">Story Topic</label>
+        <input asp-for="Topic" class="form-control col-md-6" />
+    </div>
+    <div class="row p-2">
+        <label asp-for="Year" class="control-label col-md-1">Year </label>
+        <input asp-for="Year" class="form-control col-md-6" />
+    </div>
+    <div class="row p-2">
+        <label asp-for="StoryText" class="control-label col-md-1">Your Story</label>
+        <textarea asp-for="StoryText" class="form-control col-md-6" ></textarea>
+    </div>
+    <div class="row p-2">
+        <label asp-for="SubmitterName" class="control-label col-md-1">Your Name</label>
+        <input asp-for="SubmitterName" class="form-control col-md-6" />
+    </div>
+    <!--
+    <div class="row p-2">
+        <label asp-for="SubmitDate" class="control-label col-md-1">Today's Date'</label>
+        <input asp-for="SubmitDate" class="form-control col-md-6" />
+    </div>-->
+
+
+    <button type="submit">Submit Your Story!</button>
+</form>
+

@@ -28,10 +28,12 @@ namespace RyanPolterSite.Controllers
             return View();
         }
 
+        
         public IActionResult Stories()
         {
             return View();
         }
+        
 
         public IActionResult Privacy()
         {
