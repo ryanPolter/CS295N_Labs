@@ -1,0 +1,37 @@
+﻿@model StoriesModel
+<div>
+    <header class="jumbotron bg-secondary">
+        <h1 style="text-align: center"> <!--Inline is gross I know, just quick fix for now-->
+            <b>~We Appreciate Your Story!~</b>
+
+        </h1>
+    </header>
+    <form method="post" class="container form-horizontal">
+        <div class="row">
+            <label asp-for="StoryTitle" class="control-label col-sm-1">Title of Story</label>
+            <input asp-for="StoryTitle" class="form-control col-sm-6 p-2 m-2" />
+        </div>
+        <div class="row">
+            <label asp-for="Topic" class="control-label col-sm-1">Story Topic</label>
+            <input asp-for="Topic" class="form-control col-sm-6 p-2 m-2" />
+        </div>
+        <div class="row">
+            <label asp-for="Year" class="control-label col-sm-1">Year </label>
+            <input asp-for="Year" class="form-control col-sm-3 p-2 m-2" />
+        </div>
+        <div class="row">
+            <label asp-for="StoryText" class="control-label col-sm-1">Your Story</label>
+            <textarea asp-for="StoryText" class="form-control col-sm-10 p-2 m-2"></textarea>
+        </div>
+        <div class="row">
+            <label asp-for="SubmitterName" class="control-label col-sm-1">Your Name</label>
+            <input asp-for="SubmitterName" class="form-control col-sm-6 p-2 mx-2 mt-2 mb-3 " />
+        </div>
+
+        <div class="d-grid">
+            <button type="submit" class="btn-outline-success btn-block my-sm-5">Submit Your Story!</button>
+        </div>
+    </form>
+</div>
+
+
