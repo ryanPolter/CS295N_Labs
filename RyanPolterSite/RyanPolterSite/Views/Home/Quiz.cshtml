@@ -1,0 +1,44 @@
+﻿@model List<QuizVM>
+@{
+    ViewData["Title"] = "Quiz";
+}
+
+<div>
+    <h1>Here is the Quiz Page!</h1>
+    <form method="post" class="container">
+        @for(int i = 0; i < Model.Count; i++){
+            switch(Model[i].Type)
+            {
+                case QuestionType.ShortAnswer:
+                    <label asp-for="@Model[i].UserAnswer" class="control-label">@Model[i].Question</label>
+                    <input asp-for="@Model[i].UserAnswer" type="text" class="form-control pb-1" />
+                    <p>@Model[i]?.IsRight</p>
+                    break;
+
+                case QuestionType.Numeric:
+                    <label asp-for="@Model[i].UserAnswer" class="control-label">@Model[i].Question</label>
+                    <input asp-for="@Model[i].UserAnswer" type="text" class="form-control pb-1" />
+                    <p>@Model[i]?.IsRight</p>
+                    break;
+
+                case QuestionType.TrueFalse:
+                    <p class="row"@Model[i].Question></p>
+                    <div class="row">
+                        <label for="true" class="">True</label>
+                        <input asp-for="@Model[i].UserAnswer" id="true" type="radio" value="true" class="form-control " />
+                    </div>
+                    <div class="row">
+                        <label for="false" class="">False</label>
+                        <input asp-for="@Model[i].UserAnswer" id="false" type="radio" value="false" class="form-control" />
+                    </div>
+                    <p>@Model[i]?.IsRight</p>
+                    break;
+
+            }
+        }
+        <br/>
+
+        <input type="submit" value="Check Answers" class="form-control btn"/>
+
+    </form>
+</div>

@@ -33,7 +33,29 @@ namespace RyanPolterSite.Controllers
         {
             return View();
         }
-        
+
+        //public IActionResult Quiz()
+        //{
+        //    return View();
+        //}
+        public IActionResult Quiz()
+        {
+            List<QuizVM> questionSet = RyanPolterSite.Quiz.GenerateQuestionSet();
+            return View(questionSet);
+        }
+
+        [HttpPost]
+        public IActionResult Quiz(List<QuizVM> answers)
+        {
+            var quesions = RyanPolterSite.Quiz.GenerateQuestionSet();
+            for (int i = 0; i < quesions.Count; i++)
+            {
+                quesions[i].UserAnswer = answers[i].UserAnswer;
+            }
+            RyanPolterSite.Quiz.CheckAnswers(quesions);
+            return View(quesions);
+        }
+
 
         public IActionResult Privacy()
         {

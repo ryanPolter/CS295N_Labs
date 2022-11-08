@@ -2,7 +2,7 @@
 
 namespace RyanPolterSite.Controllers
 {
-    public class YourChoiceController : Controller
+    public class DiscographyController : Controller
     {
         public IActionResult Index()
         {

@@ -11,6 +11,7 @@ namespace RyanPolterSite.Controllers
     {
         public IActionResult Index(string storyTitle, string topic, int year, string storyText, string submitterName, DateTime date)
         {
+
             StoriesModel story = new StoriesModel();
             story.StoryTitle = storyTitle;
             story.Topic = topic;
