@@ -22,14 +22,14 @@
                     break;
 
                 case QuestionType.TrueFalse:
-                    <p class="row"@Model[i].Question></p>
+                    <p class="row">@Model[i].Question</p>
                     <div class="row">
-                        <label for="true" class="">True</label>
-                        <input asp-for="@Model[i].UserAnswer" id="true" type="radio" value="true" class="form-control " />
+                        <label for="true" class="col-1">True</label>
+                        <input asp-for="@Model[i].UserAnswer" id="true" type="radio" value="true" class="form-control col-1 pl-2" />
                     </div>
                     <div class="row">
-                        <label for="false" class="">False</label>
-                        <input asp-for="@Model[i].UserAnswer" id="false" type="radio" value="false" class="form-control" />
+                        <label for="false" class="col-1">False</label>
+                        <input asp-for="@Model[i].UserAnswer" id="false" type="radio" value="false" class="form-control col-1 pl-2" />
                     </div>
                     <p>@Model[i]?.IsRight</p>
                     break;

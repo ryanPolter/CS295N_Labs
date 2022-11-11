@@ -10,7 +10,7 @@ namespace RyanPolterSite.Controllers
         //{
         //    return View();
         //}
-
+           //   This was all moved to Home controller
         public IActionResult Quiz()
         {
             List<QuizVM> questionSet = RyanPolterSite.Quiz.GenerateQuestionSet();

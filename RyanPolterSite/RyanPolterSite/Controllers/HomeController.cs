@@ -48,7 +48,7 @@ namespace RyanPolterSite.Controllers
         public IActionResult Quiz(List<QuizVM> answers)
         {
             var quesions = RyanPolterSite.Quiz.GenerateQuestionSet();
-            for (int i = 0; i < quesions.Count; i++)
+            for (int i = 0; i < answers.Count; i++)
             {
                 quesions[i].UserAnswer = answers[i].UserAnswer;
             }
