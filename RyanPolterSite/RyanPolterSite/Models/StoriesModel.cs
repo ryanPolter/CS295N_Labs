@@ -7,6 +7,8 @@ namespace RyanPolterSite.Models
 {
     public class StoriesModel
     {
+
+        public int StoriesModelId { get; set; }
         public string StoryTitle { get; set; }
         public string Topic { get; set; }
         public int Year { get; set; }

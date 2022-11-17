@@ -29,6 +29,7 @@ namespace RyanPolterSite.Controllers
         }
 
         
+        //  This never fires
         public IActionResult Stories()
         {
             return View();

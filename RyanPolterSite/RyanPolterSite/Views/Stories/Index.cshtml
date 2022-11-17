@@ -9,7 +9,7 @@
 
 
 <div>
-    @if (Model.StoryText != null)
+    @if (Model != null)
     {
         <h2>Recently posted Stories</h2>
         <p>
@@ -22,6 +22,7 @@
 
         </p>
     }
+
     <br/>
     <!--Add storyPost link here-->
     <a href="/Stories/StoryPost">Share a story here!</a>
