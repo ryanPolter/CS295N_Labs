@@ -16,38 +16,17 @@ namespace RyanPolterSite.Controllers
         }
 
         //  This function fires when clicking on stories page && after clicking "Submit your Story!", but now just brings me back to Stories Page
-        public IActionResult Index(int storiesModelId)
+        public IActionResult Index(int storyId)
         {
             // If the http request doesn't have a storiesModelId, then storiesModelId= 0.
             var story = context.Stories
-
-                .Where(story => story.StoriesModelId == storiesModelId)
+                .Where(story => story.StoriesModelId == storyId)
                 .SingleOrDefault();  // default is null
-            // If no review is found, a null is sent to the view.
+            // If no story is found, a null is sent to the view.
             return View(story);
         }
         
 
-        /*
-        public IActionResult Index(string storyId
-            /string storyTitle, string topic, int year, string storyText, string submitterName, DateTime date/)
-        {
-
-            StoriesModel story = new StoriesModel();
-
-            /*
-            story.StoryTitle = storyTitle;
-            story.Topic = topic;
-            story.Year = year; 
-            story.StoryText = storyText;
-            story.SubmitterName = submitterName;
-            story.SubmitDate = date;
-            //
-
-            story = context.Stories.First();
-            return View(story);
-        }
-        */
 
         //  This brings me to the story post forum
         public IActionResult StoryPost()
@@ -80,5 +59,28 @@ namespace RyanPolterSite.Controllers
             );
             */
         }
+
+
+
+        /*
+        public IActionResult Index(string storyId
+            /string storyTitle, string topic, int year, string storyText, string submitterName, DateTime date/)
+        {
+
+            StoriesModel story = new StoriesModel();
+
+            /*
+            story.StoryTitle = storyTitle;
+            story.Topic = topic;
+            story.Year = year; 
+            story.StoryText = storyText;
+            story.SubmitterName = submitterName;
+            story.SubmitDate = date;
+            //
+
+            story = context.Stories.First();
+            return View(story);
+        }
+        */
     }
 }
